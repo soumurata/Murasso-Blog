@@ -3,10 +3,12 @@ version: '3'
 services:
   app:
     build: .
+    working_dir: /app
     stdin_open: true
     tty: true
     volumes:
-      - ./code:/code
+      - .:/app
     ports:
       - "8000:8000"
-    # command: python3 manage.py runserver 0.0.0.0:8000
+    # command: python3 ./myblog/manage.py runserver
+    command: python3 ./myblog/manage.py runserver 0.0.0.0:8000
