@@ -10,5 +10,4 @@ services:
       - .:/app
     ports:
       - "8000:8000"
-    # command: python3 ./myblog/manage.py runserver
-    command: python3 ./myblog/manage.py runserver 0.0.0.0:8000
+    command: python3 ./manage.py runserver 0.0.0.0:8000
