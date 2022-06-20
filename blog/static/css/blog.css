@@ -1,6 +1,6 @@
 .page-header {
     background-color: #C25100;
-    margin-top: 0;
+    margin:0;
     padding: 20px 20px 20px 40px;
 }
 
@@ -37,10 +37,62 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
-    margin-bottom: 70px;
+
+
+.container{
+  background-color: #e5e7eb;
+  padding: 30px 0 30px 0;
+  display: flex;
+}
+.w-13\/18{
+  width: 72.22%;
+  /* background-color: #fff; */
+  border-radius: 10px;
+}
+.w-5\/18{
+  width: 27.78%;
+  /* background-color: #fff; */
+  border-radius: 10px;
 }
 
-.post h2 a, .post h2 a:visited {
+.w-13\/18 + .w-5\/18{
+  margin-left: 20px;
+}
+
+.w-5\/18 + .w-13\/18{
+  margin-left: 20px;
+}
+
+/* post_list */
+.post_list .main{
+  background-color: #e5e7eb;
+  display: flex;
+}
+.post_list .w-13\/18 .w-13\/18{
+  background-color: #fff;
+}
+
+.post_list .second{
+  background-color: #fff;
+}
+
+.post_list .post h2 a, .post h2 a:visited {
     color: #000000;
+}
+
+.post_list .post{
+  padding-left: 15px;
+  margin-bottom: 70px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+/* post_detail */
+.post_detail .main{
+  background-color: #fff;
+  padding: 10px;
+}
+
+.post_detail .second{
+  background-color: #fff;
 }
