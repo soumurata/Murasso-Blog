@@ -1,12 +1,30 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+<div class="post_list">
+  <div class="container">
+    <div class="w-13/18 main">
+      <div class="w-5/18 category">
+        テクニカルライティング
+      </div>
+      <div class="w-13/18">
+        {% for post in posts %}
         <div class="post">
-            <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-            <div class="date">
-                {{ post.published_date }}
-            </div>
+          <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+          <div class="date">
+            {{ post.published_date }}
+          </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="w-5/18 second">
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 {% endblock %}
